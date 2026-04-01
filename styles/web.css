@@ -1,0 +1,483 @@
+/* --- Hero Section of the web page  --- */
+.hero-section {
+    padding: 180px 0 100px;
+    background: linear-gradient(
+        to right, 
+        rgba(0, 26, 44, 0.95), 
+        rgba(0, 26, 44, 0.7)
+    ), 
+    url('https://staging.airtechcommunication.com/wp-content/uploads/2026/03/Web-Development.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+/* Gradient text using your --primary variable */
+.text-gradient {
+    background: linear-gradient(45deg, var(--primary), #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.hero-lead {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 650px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* --- Premium Primary Button --- */
+.btn-talk-premium {
+    background-color: var(--primary);
+    color: var(--var-dark-bg) !important;
+    padding: 16px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+    border: 2px solid var(--primary);
+    display: inline-block;
+}
+
+.btn-talk-premium:hover {
+    background-color: transparent;
+    color: var(--primary) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.4);
+}
+
+/* --- Secondary Outline Button --- */
+.btn-outline-custom {
+    padding: 14px 32px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+    transition: 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-outline-custom:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* Floating Abstract Shape for visual depth */
+.hero-abstract-shape {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.15;
+    filter: blur(60px);
+    z-index: 0;
+}
+/* second section of web page  */
+/* Container for Web Development Services */
+.wd-service-card {
+    background: #ffffff; /* Forced White Background */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 40px 30px;
+    border-radius: 24px;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Update text color to be visible on white */
+.wd-service-card h4, 
+.wd-service-card h3 {
+    color: var(--var-navy-dark) !important;
+}
+
+.wd-service-card p {
+    color: #555 !important; /* Soft dark grey for readability */
+}
+
+.wd-service-card:hover {
+    background: #ffffff;
+    border-color: var(--primary);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.wd-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--primary);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    transition: 0.3s ease;
+}
+
+.wd-feature-list li {
+    color: var(--var-navy) !important; /* Darker text for list items */
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+/* third section of web page  */
+/* Process Timeline Container */
+.at-process-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* Central Vertical Line (Optional - removed per your preference for clean UI) */
+.at-process-timeline::after {
+    display: none; 
+}
+
+/* Individual Timeline Item */
+.at-process-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* Numbered Dots */
+.at-process-dot {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: -20px;
+    background-color: #fff;
+    border: 2px solid var(--primary);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternating Sides Logic */
+.at-process-item:nth-child(odd) { left: 0; text-align: right; }
+.at-process-item:nth-child(even) { left: 50%; text-align: left; }
+
+.at-process-item:nth-child(even) .at-process-dot { left: -20px; }
+
+/* Content Card Styling */
+.at-process-content {
+    padding: 20px 30px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    position: relative;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Text Visibility Fixes */
+.at-process-content h4 {
+    color: var(--var-navy-dark) !important;
+}
+
+.at-process-content p {
+    color: var(--var-navy) !important;
+    opacity: 0.8;
+}
+
+.at-process-item:hover .at-process-content {
+    background: #fff;
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.at-process-item:hover .at-process-dot {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+/* Responsive Fixes */
+@media screen and (max-width: 768px) {
+    .at-process-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+        text-align: left !important;
+    }
+    .at-process-item:nth-child(even) { left: 0%; }
+    .at-process-dot { left: 11px !important; }
+}
+/* fourth section of web page  */
+/* Container for the Grid */
+.at-stack-main-container {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 30px;
+}
+
+/* Grid Layout */
+.at-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual Stack Item */
+.at-stack-item {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 20px 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.at-stack-item i {
+    font-size: 2rem;
+    color: var(--var-navy);
+    margin-bottom: 12px;
+    transition: 0.3s ease;
+}
+
+.at-stack-item span {
+    font-weight: 600;
+    color: var(--var-navy-dark);
+    font-size: 0.9rem;
+}
+
+/* Hover Effects */
+.at-stack-item:hover {
+    border-color: var(--primary);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.15);
+}
+
+.at-stack-item:hover i {
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .at-stack-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* fifth section of web page  */
+.at-perf-section {
+    overflow: hidden;
+}
+
+/* Optional subtle background glow */
+.at-perf-blur-glow {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: var(--primary);
+    filter: blur(150px);
+    opacity: 0.05;
+    z-index: 0;
+}
+
+/* List Icon Spacing */
+.at-perf-list i {
+    font-size: 1.2rem;
+    width: 25px;
+}
+
+/* Visual Card for Stats */
+.at-perf-visual-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Progress Bar Animation (Optional) */
+.at-perf-bar {
+    transition: width 1.5s ease-in-out;
+}
+
+/* CTA Button Styling */
+.at-perf-cta-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+}
+
+.at-perf-cta-btn:hover {
+    background-color: var(--var-navy);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 61, 107, 0.2);
+}
+/* sixth section of web page  */
+/* Feature Box Styling */
+.at-edge-box {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    height: 100%;
+    transition: all 0.3s ease;
+    border-left: 4px solid rgba(56, 189, 248, 0.1); /* Subtle primary border */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+}
+
+.at-edge-box:hover {
+    background: #fff;
+    border-left: 4px solid var(--primary);
+    transform: translateX(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Icon Container */
+.at-edge-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(56, 189, 248, 0.1); /* Light Primary background */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+/* Bottom Banner */
+.at-edge-banner {
+    background: rgba(56, 189, 248, 0.05);
+    border: 1px solid rgba(56, 189, 248, 0.1);
+    padding: 35px;
+    border-radius: 24px;
+    margin-top: 20px;
+}
+
+.at-edge-banner .at-edge-icon {
+    margin-bottom: 0;
+    min-width: 50px;
+    background: var(--primary);
+    color: #fff;
+}
+
+/* Gradient Text for Headlines */
+.at-edge-gradient {
+    background: linear-gradient(90deg, var(--primary), var(--var-navy));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* CTA Button */
+.at-edge-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.at-edge-btn:hover {
+    background-color: var(--primary);
+    color: #fff;
+    transform: translateY(-2px);
+}
+/* seven section of web page  */
+.at-faq-accordion {
+    border: none;
+    background: transparent;
+}
+
+.at-faq-item {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 16px !important;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.at-faq-item:hover {
+    border-color: var(--primary) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Question Button */
+.at-faq-btn {
+    background: transparent !important;
+    color: var(--var-navy-dark) !important;
+    font-weight: 700;
+    padding: 25px;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.at-faq-btn:not(.collapsed) {
+    color: var(--primary) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Arrow Styling - Resetting filters for visibility on light BG */
+.at-faq-btn::after {
+    filter: none; 
+}
+
+.at-faq-btn:not(.collapsed)::after {
+    /* Using your primary color for the active arrow */
+    filter: sepia(100%) hue-rotate(170deg) saturate(500%); 
+}
+
+/* Answer Body */
+.at-faq-body {
+    background: transparent;
+    color: var(--var-navy);
+    opacity: 0.8;
+    line-height: 1.8;
+    padding: 25px;
+    font-size: 0.95rem;
+}

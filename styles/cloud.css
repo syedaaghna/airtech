@@ -1,0 +1,95 @@
+/* --- Hero Section of the web page  --- */
+.hero-section {
+    padding: 180px 0 100px;
+    background: linear-gradient(
+        to right, 
+        rgba(0, 26, 44, 0.95), 
+        rgba(0, 26, 44, 0.7)
+    ), 
+    url('https://staging.airtechcommunication.com/wp-content/uploads/2026/03/Software-Solutions.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+/* Gradient text using your --primary variable */
+.text-gradient {
+    background: linear-gradient(45deg, var(--primary), #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.hero-lead {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 650px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* --- Premium Primary Button --- */
+.btn-talk-premium {
+    background-color: var(--primary);
+    color: var(--var-dark-bg) !important;
+    padding: 16px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+    border: 2px solid var(--primary);
+    display: inline-block;
+}
+
+.btn-talk-premium:hover {
+    background-color: transparent;
+    color: var(--primary) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.4);
+}
+
+/* --- Secondary Outline Button --- */
+.btn-outline-custom {
+    padding: 14px 32px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+    transition: 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-outline-custom:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* Floating Abstract Shape for visual depth */
+.hero-abstract-shape {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.15;
+    filter: blur(60px);
+    z-index: 0;
+}
