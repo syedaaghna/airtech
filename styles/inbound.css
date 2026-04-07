@@ -1,0 +1,541 @@
+/* styles for inbound services  */
+/* --- second  SECTION LAYOUT --- */
+.atc-inbound-hero {
+    background-color: #ffffff; 
+    overflow: hidden;
+    position: relative;
+    padding: 100px 0;
+    z-index: 1;
+}
+
+.atc-service-pill {
+    color: #4b5563;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 12px;
+    background: #f9fafb;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.atc-service-pill:hover {
+    border-color: var(--primary);
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.1);
+}
+
+.atc-service-pill i {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+/* --- PRIMARY BUTTON --- */
+.atc-main-btn {
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center; 
+    padding: 8px 24px; 
+    width: fit-content; 
+    background: #3DC2F7; 
+    color: #131212 !important;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(61, 194, 247, 0.3);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.atc-main-btn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.25);
+}
+
+/* --- THE INTERACTIVE CARD --- */
+.atc-visual-wrapper {
+    position: relative;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.atc-interactive-card {
+    background: #ffffff;
+    border: 1px solid var(--atc-border);
+    border-radius: 24px;
+    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: pointer;
+}
+
+/* CARD HOVER STYLE */
+.atc-interactive-card:hover {
+    transform: translateY(-15px) scale(1.02) rotate(1deg);
+    box-shadow: 0 50px 80px rgba(0, 74, 135, 0.12);
+    border-color: var(--primary);
+}
+
+/* Browser Dot Decorations */
+.atc-browser-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.atc-browser-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.atc-browser-dots span:nth-child(1) { background: #ff5f56; }
+.atc-browser-dots span:nth-child(2) { background: #ffbd2e; }
+.atc-browser-dots span:nth-child(3) { background: #27c93f; }
+
+.atc-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.atc-status-tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: #ecfdf5;
+    color: #059669;
+    padding: 5px 12px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+}
+
+/* PROGRESS BAR STYLES */
+.atc-growth-bar {
+    width: 100%;
+    height: 10px;
+    background: #f3f4f6;
+    border-radius: 20px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.atc-growth-fill {
+    width: 45%; 
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--primary-deep));
+    border-radius: 20px;
+    transition: width 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Animate progress on hover */
+.atc-interactive-card:hover .atc-growth-fill {
+    width: 92%;
+}
+
+.atc-mini-badge {
+    padding: 6px 14px;
+    background: var(--var-dark-bg);
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* --- DECORATIVE ACCENT --- */
+.atc-accent-blob {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+    filter: blur(60px);
+    opacity: 0.12;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 991px) {
+    .atc-inbound-hero {
+        text-align: center;
+        padding: 60px 0;
+    }
+    .atc-service-pill {
+        justify-content: center;
+    }
+    .atc-main-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .atc-visual-wrapper {
+        margin-top: 40px;
+        padding: 0;
+    }
+}
+/* third section styles  */
+/* Unique Airtech Inbound Services Styling */
+.atc-serv-section {
+    position: relative;
+    padding: 100px 0;
+}
+
+.atc-serv-card {
+    background: #ffffff; 
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+
+.atc-serv-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.atc-serv-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.atc-serv-card:hover::before {
+    opacity: 1;
+}
+
+.atc-serv-icon {
+    width: 65px;
+    height: 65px;
+    background: rgba(56, 189, 248, 0.1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.atc-serv-card:hover .atc-serv-icon {
+    background: var(--primary);
+    color: #fff; 
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.atc-serv-card h4 {
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+}
+
+.atc-serv-card p {
+    line-height: 1.6;
+}
+
+/* Mobile adjustments */
+@media (max-width: 991px) {
+    .atc-serv-section { padding: 60px 0; }
+    .atc-serv-card { padding: 2rem 1.5rem; }
+}
+/* section four styles  */
+/* Section Container */
+/* Section & Typography */
+.atc-rely-section {
+    background-color: #ffffff;
+    overflow: visible; 
+}
+
+/* Sticky Logic */
+.atc-sticky-element {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120px; 
+    padding-bottom: 2rem;
+}
+
+/* Badge Styles */
+.atc-badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--primary);
+    background: rgba(0, 102, 255, 0.08);
+    padding: 6px 14px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+/* Content List Styles */
+.atc-content-list {
+    padding-top: 20px;
+}
+
+.atc-step {
+    padding: 40px 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    gap: 30px;
+    transition: all 0.3s ease;
+}
+
+.atc-step:first-child { padding-top: 0; }
+.atc-step:last-child { border-bottom: none; }
+
+.atc-step-num {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary);
+    opacity: 0.4;
+    padding-top: 4px;
+}
+
+.atc-step-body h4 {
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.atc-step-body p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Hover Enhancement */
+.atc-step:hover .atc-step-num {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .atc-sticky-element {
+        position: relative;
+        top: 0;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    
+    .atc-title { font-size: 2.2rem; }
+    
+    .atc-step {
+        flex-direction: column;
+        gap: 10px;
+        padding: 30px 0;
+    }
+}
+/* fifth section styles  */
+/* Section Setup */
+.atc-solve-section {
+    background-color: #f1f5f9;
+    overflow: hidden;
+}
+
+.atc-badge {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(56, 189, 248, 0.1);
+    border-radius: 50px;
+}
+
+.atc-header-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary));
+    margin-bottom: 20px;
+}
+
+/* Card Design */
+.atc-solve-card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 24px;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 61, 107, 0.05);
+    position: relative;
+    z-index: 1;
+}
+
+.atc-solve-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px -12px rgba(0, 45, 80, 0.1);
+    border-color: var(--primary);
+}
+
+/* Icon & Number Styling */
+.atc-card-icon-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.atc-card-icon-wrap i {
+    font-size: 2rem;
+    color: var(--primary);
+    transition: 0.3s ease;
+}
+
+.atc-card-num {
+    font-size: 0.9rem;
+    font-weight: 900;
+    color: var(--var-navy);
+    opacity: 0.15;
+    font-family: monospace;
+}
+
+.atc-solve-card:hover i {
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* Professional Detail */
+.atc-solve-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    border-radius: 24px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-deep));
+    opacity: 0;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+/* Responsive Fixes */
+@media (max-width: 991px) {
+    .atc-solve-card {
+        padding: 1.8rem;
+    }
+    .atc-badge {
+        margin-bottom: 1rem;
+    }
+}
+/* sixth section styles  */
+/* Container Styling */
+.atc-cta-container {
+    background: linear-gradient(135deg, var(--var-dark-bg) 0%, var(--var-navy-dark) 100%);
+    padding: 5rem 4rem;
+    border-radius: 35px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 40px 80px -20px rgba(0, 26, 44, 0.3);
+}
+
+.atc-cta-label {
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: inline-block;
+    border-left: 3px solid var(--primary);
+    padding-left: 15px;
+}
+
+.atc-text-primary {
+    color: var(--primary);
+}
+
+.atc-cta-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Action Area */
+.atc-action-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 3rem 2rem;
+    border-radius: 25px;
+}
+
+.atc-main-btn {
+    display: block;
+    background-color: var(--primary);
+    color: var(--var-dark-bg);
+    text-decoration: none;
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.3);
+}
+
+.atc-main-btn:hover {
+    background-color: var(--primary-deep);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+    color: var(--var-navy-dark);
+}
+
+/* Status & Pulse Effect */
+.atc-status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.atc-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #10b981; /* Success Green */
+    border-radius: 50%;
+    animation: atc-blink 2s infinite;
+}
+
+@keyframes atc-blink {
+    0% { opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { opacity: 1; box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+    100% { opacity: 0.4; }
+}
+
+/* Modern Glow Background */
+.atc-glow-orb {
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--primary-deep) 0%, transparent 70%);
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* Responsive Overrides */
+@media (max-width: 991px) {
+    .atc-cta-container {
+        padding: 3rem 2rem;
+        border-radius: 25px;
+    }
+    .atc-cta-text {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+}
